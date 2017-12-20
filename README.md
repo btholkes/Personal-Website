@@ -1,2 +1,2 @@
 # Personal-Website
-My personal static website hosted through netlify and a domain I purchased.
+My personal static website hosted through netlify and a domain I purchased.  Pretty much I am doing this entirely for fun, and because it's an awesome way to learn how to make websites.  There will be a lot of changing around of layouts and content, so strap in for a wild ride!  A lot of the pages may remain blank for a while since I just kinda edit them when I feel like it and I don't have a whole ton of free time, but I promise eventually it may possibly be in a state where most of some of the pages have content in a reletively "fair" and possibly "professional" looking manner.  
