@@ -2,47 +2,22 @@ $(document).ready(function(){
 	$("#nameAlert").hide();
 	$("#messageAlert").hide();
 	$("#emailAlert").hide();
-	$("#thankDisplay").hide();
-	console.log("Ready called");
 
 	$("#submitButton").click(function(){
-		submitAction();
-	});
-
-	$("#backButton").click(function(){
-		backAction();
+		tryToSubmit();
 	});
 });
 
-function backAction()
+function tryToSubmit()
 {
-	console.log("Back Button Called");
-	$("#nameAlert").hide();
-	$("#messageAlert").hide();
-	$("#emailAlert").hide();
-	$("#thankDisplay").hide();
-	$("#contactForm").show();
-}
-
-function submitAction()
-{
-	console.log("Submit Button Clicked!");
-
 	if(isValid())
 	{
 		$("#contactForm").submit();
-		$("#nameAlert").hide();
-		$("#messageAlert").hide();
-		$("#emailAlert").hide();
-		$("#thankDisplay").hide();
-		$("#contactForm").hide();
-		$("#thankDisplay").show();
 	}
 }
 
-function ValidateEmail(mail)   
-{  
-	console.log("Email Tested", mail);
+function ValidateEmail(mail)
+{
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))  
 	{  
     	return (true)  
@@ -83,6 +58,6 @@ function isValid()
 	}
 	else
 		$("#emailAlert").hide();
-	
+
 	return valid;
 }
