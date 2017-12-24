@@ -4,19 +4,29 @@ $(document).ready(function(){
 	$("#emailAlert").hide();
 	$("#thankDisplay").hide();
 	console.log("Ready called");
+
+	$("#submitButton").click(function(){
+		submitAction();
+	});
+
+	$("#backButton").click(function(){
+		backAction();
+	});
 });
 
-$("#backButton").click(function(){
+function backAction()
+{
 	console.log("Back Button Called");
 	$("#nameAlert").hide();
 	$("#messageAlert").hide();
 	$("#emailAlert").hide();
 	$("#thankDisplay").hide();
 	$("#contactForm").show();
-});
+}
 
-
-$("#submitButton").click(function(){
+function submitAction()
+{
+	console.log("Submit Button Clicked!");
 
 	if(isValid())
 	{
@@ -28,13 +38,17 @@ $("#submitButton").click(function(){
 		$("#contactForm").hide();
 		$("#thankDisplay").show();
 	}
-});
-
-function validateEmail(email) 
-{
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email.toLowerCase());
 }
+
+function ValidateEmail(mail)   
+{  
+	console.log("Email Tested", mail);
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))  
+	{  
+    	return (true)  
+  	}   
+    	return (false)  
+}  
 
 function isValid()
 {
@@ -44,23 +58,31 @@ function isValid()
 	message = $("#message").val();
 	email = $("#email").val();
 
+	valid = true;
+
 	if(name=="")
 	{
 		$("#nameAlert").show();
-		return false;
-	}
-	else if(message == "")
-	{
-		$("#messageAlert").show();
-		return false;
-	}
-	else if(validateEmail(email))
-	{
-		$("#emailAlert").show();
-		return false;
+		valid = false;
 	}
 	else
+		$("#nameAlert").hide();
+
+	if(message == "")
 	{
-		return true;
+		$("#messageAlert").show();
+		valid = false;
 	}
+	else
+		$("#messageAlert").hide();
+
+	if(!ValidateEmail(email))
+	{
+		$("#emailAlert").show();
+		valid = false;
+	}
+	else
+		$("#emailAlert").hide();
+	
+	return valid;
 }
