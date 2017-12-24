@@ -3,26 +3,34 @@ $(document).ready(function(){
 	$("#messageAlert").hide();
 	$("#emailAlert").hide();
 	$("#thankDisplay").hide();
-	$("#submitButton").click(submit());
-	$("#backButton").click(back());
+	console.log("Ready called");
 });
 
-function back()
-{
+$("#backButton").click(function(){
+	console.log("Back Button Called");
 	$("#nameAlert").hide();
 	$("#messageAlert").hide();
 	$("#emailAlert").hide();
 	$("#thankDisplay").hide();
 	$("#contactForm").show();
-}
+});
 
-function submit()
-{
-	if(isValid)
-	{
-		$("#contactForm").submit();
-	}
-}
+$("#contactForm").submit(function(e) {
+  e.preventDefault();
+
+  if(isValid)
+  {
+  	var $form = $(this);
+	  $.post($form.attr("action"), $form.serialize()).then(function() {
+	  	$("#nameAlert").hide();
+		$("#messageAlert").hide();
+		$("#emailAlert").hide();
+		$("#thankDisplay").hide();
+		$("#contactForm").hide();
+	    $("#thankDisplay").show();
+	  });
+  }
+});
 
 function validateEmail(email) 
 {
