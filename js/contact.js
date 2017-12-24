@@ -15,21 +15,20 @@ $("#backButton").click(function(){
 	$("#contactForm").show();
 });
 
-$("#contactForm").submit(function(e) {
-  e.preventDefault();
 
-  if(isValid)
-  {
-  	var $form = $(this);
-	  $.post($form.attr("action"), $form.serialize()).then(function() {
-	  	$("#nameAlert").hide();
+$("#submitButton").click(function(e){
+	e.preventDefault();
+
+	if(isValid())
+	{
+		$("#contactForm").submit();
+		$("#nameAlert").hide();
 		$("#messageAlert").hide();
 		$("#emailAlert").hide();
 		$("#thankDisplay").hide();
 		$("#contactForm").hide();
-	    $("#thankDisplay").show();
-	  });
-  }
+		$("#thankDisplay").show();
+	}
 });
 
 function validateEmail(email) 
