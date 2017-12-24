@@ -16,8 +16,7 @@ $("#backButton").click(function(){
 });
 
 
-$("#submitButton").click(function(e){
-	e.preventDefault();
+$("#submitButton").click(function(){
 
 	if(isValid())
 	{
