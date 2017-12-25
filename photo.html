@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111418005-1"></script>
     <script>
@@ -10,25 +10,34 @@
 
       gtag('config', 'UA-111418005-1');
     </script>
-    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <meta name="viewport" content="width=device-width, user-scalable=false">
     <title>Artistry Fartistry</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
- </head>
-  
-<body>
-  	
-    <div id="nav-placeholder"></div>
-
-     <script>
-      $(function(){
-        $("#nav-placeholder").load("./assets/nav.html");
-      });
-    </script>
-
- 	Go <a href="index.html">back</a> while you still can; there's nothing here for you!
-
     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>  
+    <script type="text/javascript" src="js/FlickrAPI.js"></script>
+    <script type="text/javascript" src="js/Flickr.Gallery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+<body style="padding-top: 70px">
+
+  <div id="nav-placeholder"></div>
+
+   <script>
+    $(function(){
+      $("#nav-placeholder").load("./assets/nav.html");
+    });
+  </script>
+
+ 	<div class="content"> 
+    <div class="niceGallery" id="gallery">
+    </div>
+  </div>
+  
 </body>
 </html>
