@@ -1,1 +1,3 @@
-NoteToSelf.txt
+_site
+.sass-cache
+.jekyll-metadata

@@ -1,0 +1,78 @@
+<script src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
+
+<script src="{{"/assets/scripts.js" | relative_url }}"></script>
+
+{% if page.url contains 'contact' %}
+  <script>
+    $(document).ready(function(){
+      $("#nameAlert").hide();
+      $("#messageAlert").hide();
+      $("#emailAlert").hide();
+
+      $("#submitButton").click(function(){
+        tryToSubmit();
+      });
+    });
+
+    function tryToSubmit()
+    {
+      if(isValid())
+      {
+        $("#contactForm").submit();
+      }
+    }
+
+    function ValidateEmail(mail)
+    {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))  
+      {  
+          return (true)  
+        }   
+          return (false)  
+    }  
+
+    function isValid()
+    {
+      var name, message, email;
+
+      name = $("#name").val();
+      message = $("#message").val();
+      email = $("#email").val();
+
+      valid = true;
+
+      if(name=="")
+      {
+        $("#nameAlert").show();
+        valid = false;
+      }
+      else
+        $("#nameAlert").hide();
+
+      if(message == "")
+      {
+        $("#messageAlert").show();
+        valid = false;
+      }
+      else
+        $("#messageAlert").hide();
+
+      if(!ValidateEmail(email))
+      {
+        $("#emailAlert").show();
+        valid = false;
+      }
+      else
+        $("#emailAlert").hide();
+
+      return valid;
+    }
+  </script>
+{% endif %}
+
+{% if page.url contains 'photos' %}
+  <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>
+{% endif %}
