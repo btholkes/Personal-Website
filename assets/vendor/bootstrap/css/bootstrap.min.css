@@ -66,6 +66,19 @@ html {
     -webkit-tap-highlight-color: transparent
 }
 
+.nGY2paginationItem {
+    background-color: #4DBD33;
+}
+
+.nGY2PaginationNext {
+    background-color: #4DBD33;
+
+}
+
+.nGY2paginationItemCurrentPage {
+    background-color: #348122;
+}
+
 *,
 *::before,
 *::after {
