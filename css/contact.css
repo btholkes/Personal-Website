@@ -1,0 +1,15 @@
+body
+{
+	padding-top: 100px;
+}
+
+#contactDiv
+{
+	padding: 0px 15% 0px 15%;
+}
+
+.panel-body
+{
+	border: 10px solid #ff48c4; 
+	padding: 5% 5% 5% 5%;
+}
