@@ -3,10 +3,15 @@
   <head>
     <title>Braden Tholkes - Contact</title>
     <meta name="viewport" content="width=device-width, user-scalable=false">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href=/css/contact.css" rel="stylesheet">
+    <link href="/css/mdb.min.css" rel="stylesheet">
+    <link href="/css/contact.css" rel="stylesheet">
+    
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/mdb.min.js"></script>
     <script src="/js/contact.js"></script>
   </head>
   
@@ -15,7 +20,7 @@
     
   <div class="container-fluid" id="contactDiv">
     <div class="panel panel-primary">
-      <div class="panel-heading text-center"><h3>Contact Me</h3></div>
+      <div class="panel-heading text-center"><h1>Contact Me</h1></div>
       <div class="panel-body">
         <form id="contactForm" netlify-honeypot="honeypot" action="/assets/thank.html" netlify>
           <div class="form-group">
@@ -42,8 +47,10 @@
         
             <label class="sr-only">Keep this field blank</label>
             <input id="honeypot" type="text" style="display: none;"/>
-
-            <div class="order-2" data-netlify-recaptcha></div>
+            
+            <div class="text-center">
+              <div data-netlify-recaptcha></div>
+            </div>
         
             <input type="button" class="btn btn-success btn-block" value="Send" id="submitButton">
           </div>
