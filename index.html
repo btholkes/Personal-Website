@@ -7,32 +7,14 @@
     <title>Braden Tholkes - Home</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
   </head>
 
-  <body class="text-center">
+  <body>
 
-    <div id="nav-placeholder"></div>
-      
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#nav-placeholder').load('assets/nav.html');
-        });
-        $("nav").find("a").click(function(e) {
-            e.preventDefault();
-            var section = $(this).attr("href");
-            $("html, body").animate({
-            scrollTop: $(section).offset().top
-            });
-        });
-    </script>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading">Braden Tholkes</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-      </main>
-    </div>
+      <img src="/assets/background.jpg">
 
   </body>
 </html>

@@ -11,24 +11,8 @@
   
 <body>
     
-  <div id="nav-placeholder"></div>
-    
-  <script type="text/javascript">
-        $(document).ready(function() {
-            $('#nav-placeholder').load('/assets/nav.html');
-        });
-        $("nav").find("a").click(function(e) {
-            e.preventDefault();
-            var section = $(this).attr("href");
-            $("html, body").animate({
-            scrollTop: $(section).offset().top
-            });
-        });
-    </script>
-    
     <div id="about" class="container" style="color: white; text-align: center;">
         <iframe src="https://www.redbubble.com/people/bbtholkes/external-portfolio?count=16" scrolling="no" allowtransparency="true" width="986" height="973" frameborder="0"></iframe>S
-        
     </div>
     
 </body>

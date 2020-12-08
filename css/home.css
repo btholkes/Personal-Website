@@ -1,0 +1,14 @@
+body {
+  background-image: url('/assets/mobileBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* For devices 700px and larger: */
+@media only screen and (min-device-width: 700px) {
+  body {
+    background-image: url('/assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
