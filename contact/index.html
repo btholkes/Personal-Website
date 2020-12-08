@@ -12,6 +12,19 @@
   
 <body>
   <div id="nav-placeholder"></div>
+                           
+  <script type="text/javascript">
+        $(document).ready(function() {
+            $('#nav-placeholder').load('/assets/nav.html');
+        });
+        $("nav").find("a").click(function(e) {
+            e.preventDefault();
+            var section = $(this).attr("href");
+            $("html, body").animate({
+            scrollTop: $(section).offset().top
+            });
+        });
+    </script>
     
   <div class="container-fluid" id="contactDiv">
     <div class="panel panel-primary">

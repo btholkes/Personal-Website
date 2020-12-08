@@ -14,13 +14,26 @@
 <body>
 
   <div id="nav-placeholder"></div>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#nav-placeholder').load('/assets/nav.html');
+        });
+        $("nav").find("a").click(function(e) {
+            e.preventDefault();
+            var section = $(this).attr("href");
+            $("html, body").animate({
+            scrollTop: $(section).offset().top
+            });
+        });
+    </script>
 
  <div class="container-fluid">
     <div id="tabs">
       <ul class="nav nav-tabs">
         <li class="nav-item active"><a class="nav-link active" data-toggle="tab" href="#landscapes">Landscapes</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#skills">Climbing</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#skeeball">Portraits</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#climbing">Climbing</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#portraits">Portraits</a></li>
       </ul>
 
       <div class="tab-content">

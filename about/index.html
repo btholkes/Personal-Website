@@ -13,8 +13,20 @@
     
   <div id="nav-placeholder"></div>
     
+  <script type="text/javascript">
+        $(document).ready(function() {
+            $('#nav-placeholder').load('/assets/nav.html');
+        });
+        $("nav").find("a").click(function(e) {
+            e.preventDefault();
+            var section = $(this).attr("href");
+            $("html, body").animate({
+            scrollTop: $(section).offset().top
+            });
+        });
+    </script>
+    
   <div style="position: relative; left: 0; top: 0;">
-    <img src="assets/background.jpg" id="background"/>
     <img src="/assets/me.jpg" class="img-thumbnail rounded-circle" id="me"/>
   </div>
     <br>
@@ -22,77 +34,6 @@
         <h3><strong>Who am I?</strong></h3>
         <p>If you hadn't guessed it by now, my name is Braden, I'm a Dirtbag Climber, and Photographer, living in the beautiful Appalachian Mountains!  For the past few years, I’ve been climbing as often as I can, and I recently picked up a camera to capture the moments I consider myself lucky to experience.  I graduated from Western Carolina University in May, with a Bachelor’s in Parks and Recreation Management, and since then, I’ve been teaching myself the ins and outs of photography through pure obsession, and the process of experiential education!   It certainly helps that I am never at a loss of moments worthy of photographing.  I’m constantly climbing something, or otherwise mucking around in the outdoors, and I’m lucky to be surrounded by an incredible community that gives the moments their meaning!  </p>
     </div>
-
-  <div class="container-fluid">
-    <div id="tabs">
-      <ul class="nav nav-tabs">
-        <li class="nav-item active"><a class="nav-link active" data-toggle="tab" href="#quickFacts">Quick Facts</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#skills">"Skills"</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#skeeball">Literally Just A Picture Of Skee Ball</a></li>
-      </ul>
-
-      <div class="tab-content">
-        <div id="quickFacts" class="tab-pane fade in active">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <h3>Absolutely (actually legit) True Facts About Me:</h3>
-              <ul>
-                <li>Went to UNC Charlotte for a year; while there punched a goose.</li>
-                <li>Learned to ski before I learned to walk</li>
-                <li>I did not land the first time I rode in an airplane</li>
-                <li>The first concert I ever went to started off with the crowd chanting "butt stuff" and "I'm gonna pre" among other things while waiting for the band to appear</li>
-                <li>A man who was born in two places at once inspired me to pick up the guitar again after 5 years of absence</li>
-                <li>Once stood in a room in a college building wearing a pink unicorn onesie, and pointed at a man</li>
-                <li>A group of friends and I once confused my brother so hard he thought we put his pants on backwards without him noticing</li>
-                <li>Made brownies on a house boat with way too much mayonnaise and threw up a lot</li>
-                <li>Once watched the day turn to night then back to day in the middle of the day in under 10 minutes</li>
-                <li>Sent a balloon 90,000 feet into the air and found it about 200 miles away in the middle of a forest</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div id="skills" class="tab-pane fade">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <h3>Some of the things that I am "Proficient" in:</h3>
-              <ul>
-                <li>Web Design (I made this, <a href="https://github.com/btholkes/Personal-Website">didn't I?</a>)</li>
-                <li>Hiking</li>
-                <li>Playing Guitar & Ukelele</li>
-                <li>Laughing</li>
-                <li>IT....ing</li>
-                <li>Singing</li>
-                <li>Drinking Coffee</li>
-                <li>Photography & Photo Editing</li>
-                <li>Computer Building</li>
-                <li>Puns</li>
-                <li>Climbing</li>
-                <li>Programming languages including: 
-                  <ul>
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>HTML & CSS</li>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>C#</li>
-                    <li>PHP</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div id="skeeball" class="tab-pane fade text-center">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <img src="/assets/skeeball.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-  	</div>
-	</div>
+    
 </body>
 </html>
