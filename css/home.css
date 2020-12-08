@@ -1,7 +1,7 @@
 body {
   background-image: url('/assets/mobileBackground.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 40%;
 }
 
 /* For devices 700px and larger: */
@@ -9,6 +9,6 @@ body {
   body {
     background-image: url('/assets/background.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 40%;
   }
 }
