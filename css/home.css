@@ -1,14 +1,18 @@
 body {
+  position: relative;
+  height: 100%;
   background-image: url('/assets/mobileBackground.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 /* For devices 700px and larger: */
 @media only screen and (min-width: 700px) {
   body {
+    position: relative;
     background-image: url('/assets/background.jpg');
+    width: 100%;
     background-repeat: no-repeat;
-  background-size: contain;
+    background-size: cover;
   }
 }
