@@ -5,122 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Braden Tholkes - Home</title>
-    
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/contact.css" rel="stylesheet">
-
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script src="js/contact.js"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
   </head>
 
-  <body style="padding-top: 90px;">
+  <body class="text-center">
+
     <div id="nav-placeholder"></div>
-		
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#nav-placeholder').load('assets/nav.html');
-        });
-        $("nav").find("a").click(function(e) {
-            e.preventDefault();
-            var section = $(this).attr("href");
-            $("html, body").animate({
-            scrollTop: $(section).offset().top
-            });
-        });
-    </script>
-      
-   <div class="bgimg-1 text-center">
-      <span><img id="me" src="assets/me.jpg" class="img-thumbnail rounded-circle" width="45%"></span>
-      <div class="caption">
-        <span class="border">Braden Tholkes</span>
-      </div>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Braden Tholkes</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+      </main>
     </div>
-    <br>
-    <div id="about" class="text-center" style="color: white">
-        <h3><strong>Who am I?</strong></h3>
-        <p></p>
-    </div>
-    <br>
-      
-    <div id="photos" class="d-flex justify-content-center">
-      <div class="container" style="min-width: 90%;">
-        <div ID="ngy2p" data-nanogallery2='{
-        "flickrAPIKey": "837244d734b6990040fb9928d82c3040",
-        "userID": "188494175@N08",
-        "kind": "flickr",
-        "photoset": "none",
-        "thumbnailOpenOriginal": true,
-        "thumbnailWidth": "400",
-        "thumbnailHeight": "auto",
-        "colorScheme": {
-          "thumbnail": {
-            "borderColor": "rgba(131,129,129,1)"
-          }
-        },
-        "thumbnailLabel": {
-          "position": "overImageOnBottom",
-          "display": false
-        },
-        "thumbnailHoverEffect2": "imageBlurOn|borderLighter",
-        "galleryDisplayMode": "pagination",
-        "galleryMaxRows": 3,
-        "galleryPaginationMode": "numbers",
-        "thumbnailAlignment": "center",
-        "gallerySorting": "random",
-        "thumbnailOpenImage": true
-      }'>
 
-    </div>
-      </div>
-    </div> 
-    <br>
-      
-    <div id="contact" class="container-fluid" id="contactDiv">
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center"><h1>Contact Me</h1></div>
-          <div class="panel-body">
-            <form id="contactForm" netlify-honeypot="honeypot" action="/assets/thank.html" netlify>
-              <div class="form-group">
-                <input type="text" class="form-control" name="Name" id="name" placeholder="Name" />
-                <div class="alert alert-danger" id="nameAlert">
-                  <strong>Warning!</strong> You must enter a name.
-                </div>
-
-                <br>
-
-                <textarea class="form-control" name="Message" rows="10" id="message" placeholder="Message"></textarea>
-                <div class="alert alert-danger" id="messageAlert">
-                  <strong>Warning!</strong> You must enter a message.
-                </div>
-
-                <br>
-
-                <input type="text" class="form-control" name="Email" id="email" placeholder="Email" />
-                <div class="alert alert-danger" id="emailAlert">
-                  <strong>Warning!</strong> You must enter a properly formatted email
-                </div>
-
-                <br><br>
-
-                <label class="sr-only">Keep this field blank</label>
-                <input id="honeypot" type="text" style="display: none;"/>
-
-                <div class="text-center">
-                  <div data-netlify-recaptcha></div>
-                </div>
-
-                <input type="button" class="btn btn-success btn-block" value="Send" id="submitButton">
-              </div>
-            </form>
-          </div>
-        </div>
-    </div>  
   </body>
 </html>
