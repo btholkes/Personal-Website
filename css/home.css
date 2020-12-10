@@ -1,18 +1,106 @@
-body {
-  position: relative;
+body, html {
   height: 100%;
-  background-image: url('/assets/mobileBackground.jpg');
+}
+
+@font-face { font-family: Shagadelic; src: url('/assets/ShagadelicBold-jrKj.ttf'); } 
+
+
+.bg {
+  /* The image used */
+  background-image: url("/assets/background.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* For devices 700px and larger: */
-@media only screen and (min-width: 700px) {
-  body {
-    position: relative;
-    background-image: url('/assets/background.jpg');
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (max-width: 670px) {
+  .overlay nav {
+    font-size: 30px;
   }
+}
+@media (max-width: 550px) {
+  .overlay nav {
+    font-size: 20px;
+  }
+}
+
+.overlay .nav-title {
+  font-size: 60px;
+  color: #fff;
+  font-family: Shagadelic;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 8%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.overlay nav {
+  position: relative;
+  height: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 40px;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  position: relative;
+  margin-bottom: 50px;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 43.5%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+ 
+.overlay ul li a:hover,
+.overlay ul li a:focus,
+.overlay ul li a:active {
+  color: #ea2e49;
+}
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+  width: 100%;
+  background: #ea2e49;
 }
