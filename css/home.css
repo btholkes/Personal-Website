@@ -4,7 +4,6 @@ body, html {
 
 @font-face { font-family: Shagadelic; src: url('/assets/ShagadelicBold-jrKj.ttf'); } 
 
-
 .bg {
   /* The image used */
   background-image: url("/assets/background.jpg");
@@ -16,17 +15,6 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media (max-width: 670px) {
-  .overlay nav {
-    font-size: 30px;
-  }
-}
-@media (max-width: 550px) {
-  .overlay nav {
-    font-size: 20px;
-  }
 }
 
 .overlay .nav-title {
@@ -103,4 +91,16 @@ body, html {
 .overlay ul li a:active:after {
   width: 100%;
   background: #ea2e49;
+}
+
+@media screen and (max-width: 670px) {
+  .overlay nav {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .overlay nav {
+    font-size: 20px;
+  }
 }
